@@ -77,7 +77,7 @@ export default function Country() {
 
         {filteredCountries.map((country) => (
 
-          <div key={country.name.common} className="card">
+          <div key={country.name.common} className={`countryCard${country.name.common.toLowerCase() === searchTerm.toLowerCase() ? ' centered' : ''}`}>
 
             <img
               src={country.flags.png}
